@@ -9,7 +9,6 @@
 #####################
 # Docker
 #####################
-src/main/docker/data/
 src/main/docker/data/*
 src/main/docker/data/performance_schema/*
 src/main/docker/data/**/*
