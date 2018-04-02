@@ -6,6 +6,14 @@
 /src/test/javascript/coverage/
 /src/test/javascript/PhantomJS*/
 
+#####################
+# Docker
+#####################
+src/main/docker/data/
+src/main/docker/data/*
+src/main/docker/data/performance_schema/*
+src/main/docker/data/**/*
+
 ######################
 # Node
 ######################
