@@ -1,4 +1,4 @@
-# DockerCompose + SpringBoot App + Mysql
+# TeamStarter
 View DEMO - http://nginxmicroservice.ml/
 
 1. Download rep. https://github.com/Alexis-Dk/DockerCompose-Spring-Boot-App-Mysql.
