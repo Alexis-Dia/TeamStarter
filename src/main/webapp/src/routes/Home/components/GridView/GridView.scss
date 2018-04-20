@@ -1,0 +1,19 @@
+.grid-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 50px;
+  padding: 5px;
+  padding-bottom: 10px;
+}
+
+.gridChildren-grid {
+  text-align: center;
+}
+
+.grid-container1 {
+  padding-top: 10px;
+}
+
+.grid-container2 {
+  padding-top: 5px;
+}
