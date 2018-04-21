@@ -16,5 +16,5 @@ export function del (id) {
 }
 
 export function fetchMainGrid (data) {
-    return apiCall(`http://nginxmicroservice.ml/testJWTtoken`, 'GET')
+    return apiCall(`http://localhost:8080/testJWTtoken`, 'GET')
 }

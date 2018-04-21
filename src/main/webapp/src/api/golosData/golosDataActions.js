@@ -1,0 +1,1 @@
+export const MAP_FETCH_GOLOS_BLOG = 'MAP_FETCH_GOLOS_BLOG'

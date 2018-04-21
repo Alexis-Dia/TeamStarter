@@ -1,5 +1,7 @@
 import { connect } from 'react-redux';
 import React, { Component } from 'react'
+import { Button } from 'reactstrap'
+import golos from 'golos-js'
 
 import TextFieldGroup from '../signUp/textFieldGroup/TextFieldGroup';
 import './LoginForm.scss';
@@ -71,6 +73,9 @@ class LoginForm extends Component {
 
                     <div className="form-group">
                         <button className="btn btn-primary btn-lg" disabled={this.props.user.isAuthenticated}>Login</button>
+                    </div>
+                    <div>
+                      <Button color="danger">Sign in with Facebook</Button>
                     </div>
                 </form>
             </div>

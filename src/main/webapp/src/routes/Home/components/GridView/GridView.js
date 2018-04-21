@@ -17,7 +17,7 @@ class GridView extends Component {
   }
 
   componentWillMount () {
-    this.props.onGetData({numberOfElements: 4});
+    this.props.onGetData({ author: "alexeyd", enterId: 8, limit: 5 });
   }
 
   componentWillUnmount () {
@@ -40,29 +40,29 @@ class GridView extends Component {
   increment = () => {
     //this.i = this.i + 1;
     console.log("componentWillReceiveProps() increment ");
-    this.props.onGetData({numberOfElements: 12});
+    this.props.onGetData({ author: "alexeyd", enterId: 8, limit: 5 });
   }
 
   decrement = () => {
     console.log("componentWillReceiveProps() decrement ");
-    this.props.onGetData({numberOfElements: 8});
+    this.props.onGetData('alexeyd', 5, 1);
   }
 
   render = () => {
     return (
       <div>
-        <div className='grid-container1'>
+{/*        <div className='grid-container1'>
           <button onClick={this.decrement}>-</button>
           <button onClick={this.increment}>+</button>
-        </div>
+        </div>*/}
         <div className='grid-container2'>
           <LoadingBar style={{ width: '60%'}} />
         </div>
         <div className='grid-grid' onLoad={this.loadTrigger}>
           {this.state.gridData !== null && (this.state.gridData.map((ob) =>
-            <div className='gridChildren-grid' key={ob.name.first.toString() + ob.name.last.toString()}>
-              <img src = {ob.picture.large} style={{ width: '70%' }}/>
-              <div>{ob.name.first}</div>
+            <div className='gridChildren-grid' key={ob.comment.title.toString()}>
+              <img src = {JSON.parse(ob.comment.json_metadata).description.picture.medium.toString()} style={{ width: '50%' }}/>
+              <div>{ob.comment.title.toString()}</div>
             </div>
           ))}
         </div>
@@ -73,13 +73,13 @@ class GridView extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    gridArr: state.gridData.points
+    gridArr: state.gridData.posts
   }
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    onGetData: (data) => dispatch({ type: 'MAP_FETCH_MAIN_GRID', data })
+    onGetData: (data) => dispatch({ type: 'MAP_FETCH_GOLOS_BLOG', data })
   }
 }
 

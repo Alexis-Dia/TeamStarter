@@ -72,7 +72,7 @@ class HomeView extends Component {
   }
 
   increment = () => {
-    this.props.onGetData({ numberOfElements: 12 })
+    this.props.onGetData(['alexeyd', 5, 5])
   }
 
   render = () => {
